@@ -1,0 +1,337 @@
+
+:root { 
+	
+	/* FONTS */
+	--body-font: 'Jost', sans-serif;
+	--h1-font: 'Italiana', serif;
+	--sub-headings-font: 'Jost', sans-serif;
+	--site-title-font: 'Rozha One', serif;
+	--menu-font : 'Jost', sans-serif;
+	
+	/* TEXT COLORS */
+	--body-text-color: #42403d;
+	--dark-body-text-color : #fff;
+	--headings-text-color: #000;
+	--menu-color: var(--headings-text-color);
+	--link-color: #E54544;
+	--link-hover-color: #E54544;
+
+	/* BG COLORS */
+	--body-bg-color: #edeee9;  
+	--dark-body-bg-color: #000;
+
+	--primary-color: #E54544;
+	--button-color: #E54544;
+	--button-border-radius : var(--12rpx);
+	
+	/* TYPOGRAPHY */
+	
+    /* paramaters for all typographic scale */
+    --font-size : 19px; /* body desktop font size */
+    --h1-max-font-size : 126; /* H1 max font size */
+	--h1-font-weight: 400;
+	--sub-headings-font-weight: 500;
+    --h2-max-font-size : 44px; /* H2 max font size : to  stop h2-h6 's growth at some point when h1 is getting too big */
+	--h3-max-font-size : 22px;
+	--h4-max-font-size : 18px;
+
+	/* menu font size */
+	--menu-font-size : 18px;
+	--menu-font-weight: 400;
+	--menu-letter-spacing : var(--0rpx);
+
+    /* controls headings growth ratio */
+    --font-ratio : calc(var(--h1-max-font-size) / 20); 
+
+    /* minimum font size can't be lower than 14px */
+    --font-size-min : max(14px, (var(--font-size) * .6) );
+
+    /* source : https://www.smashingmagazine.com/2016/05/fluid-typography/ */
+    --body-font-size : clamp(var(--font-size-min), calc( var(--font-size-min) + (24 - 14) * (100vw - 600px) / (1600 - 300) ), var(--font-size) );
+
+    /* proportional headings */
+    --h1-font-size : clamp(var(--font-size-min), (var(--font-size-min) + (var(--font-ratio) * 1vw)), (var(--h1-max-font-size) * 1px) );
+    --h2-font-size : clamp( var(--font-size-min), (var(--h1-font-size) * 0.7 ), var(--h2-max-font-size));
+    --h3-font-size : clamp( var(--font-size-min), (var(--h2-font-size) * 0.7 ), var(--h3-max-font-size));
+    --h4-font-size : clamp( var(--font-size-min), (var(--h3-font-size) * 0.8 ), var(--h4-max-font-size));
+    --h5-font-size : max( var(--font-size-min), (var(--h4-font-size) * 0.8 ));
+    --h6-font-size : max( var(--font-size-min), (var(--h5-font-size) * 0.8 ));
+	--small-font-size : max( var(--font-size-min), (var(--body-font-size) * 0.88 ));
+	--smaller-font-size : max( var(--font-size-min), (var(--body-font-size) * 0.8 ));
+	--smallest-font-size : max( var(--font-size-min), (var(--body-font-size) * 0.7 ));
+
+	/* Line Height */
+	--body-line-height : calc(0.86rem + 0.77em);
+
+	/* Text Logo */
+	--site-logo-max-font-size : 32px;
+	--site-logo-font-size : clamp(var(--font-size-min), (var(--font-size-min) + (var(--font-ratio) * .5vw)), var(--site-logo-max-font-size) );
+	--site-logo-font-weight : 700;
+
+	/* Image Logo */
+	--image-logo-height: var(--12rpx);
+
+	/* Profile Image */
+	--profile-image-width: var(--16rpx);
+	--profile-image-height: var(--16rpx);
+	--profile-image-border-radius: var(--6rpx);
+
+	/* LAYOUT */
+	--layout-medium-width: 1180px;
+
+	/* PORTFOLIO */
+	--p-title-font: 'Moniqa';
+	--p-title-max-font-size : 56;
+
+    --p-title-font-ratio : calc(var(--p-title-max-font-size) / 20); 
+	--p-title-font-size : clamp(var(--font-size-min), (var(--font-size-min) + (var(--p-title-font-ratio) * 1vw)), (var(--p-title-max-font-size) * 1px) );
+
+
+	--p-col-count: 4;
+	--p-image-width : 100;
+	--p-image-height : 30;
+	--p-gap : var(--1rpx);
+	--p-image-border-top-radius : var(--0rpx);
+	--p-image-border-bottom-radius : var(--0rpx);
+	--p-numbers-color: #ffca6a;
+
+	--gallery-gap: var(--6rpx);
+
+	/* FS SLIDER */
+	--fs-slider-in-animation: fadeZoomIn;
+	--fs-slider-out-animation: fadeZoomOut;
+	--fs-slider-animation-time: 3000;
+
+
+
+	/* SPACING */
+	--space-xxs : var(--1rpx);
+	--space-xs : var(--2rpx);
+	--space-sm : var(--4rpx);
+	--space-md : var(--6rpx); /* for block elements */
+	--space-lg : var(--8rpx);
+	--space-xl : var(--12rpx);
+	--space-xxl : var(--16rpx);
+	--space-xxxl : var(--24rpx);
+	
+	
+	/* RPX : RESPONSIVE PIXEL UNIT */	
+	--0rpx : 0px;
+	--1rpx : clamp( 2px, calc(1px + .18vw), 4px );
+	--2rpx : calc( var(--1rpx) * 2 );
+	--3rpx : calc( var(--1rpx) * 3 );
+	--4rpx : calc( var(--1rpx) * 4 );
+	--5rpx : calc( var(--1rpx) * 5 );
+	--6rpx : calc( var(--1rpx) * 6 );
+	--7rpx : calc( var(--1rpx) * 7 );
+	--8rpx : calc( var(--1rpx) * 8 );
+	--9rpx : calc( var(--1rpx) * 9 );
+	--10rpx : calc( var(--1rpx) * 10 );
+	--11rpx : calc( var(--1rpx) * 11 );
+	--12rpx : calc( var(--1rpx) * 12 );
+	--13rpx : calc( var(--1rpx) * 13 );
+	--14rpx : calc( var(--1rpx) * 14 );
+	--15rpx : calc( var(--1rpx) * 15 );
+	--16rpx : calc( var(--1rpx) * 16 );
+	--17rpx : calc( var(--1rpx) * 17 );
+	--18rpx : calc( var(--1rpx) * 18 );
+	--19rpx : calc( var(--1rpx) * 19 );
+	--20rpx : calc( var(--1rpx) * 20 );
+	--21rpx : calc( var(--1rpx) * 21 );
+	--22rpx : calc( var(--1rpx) * 22 );
+	--23rpx : calc( var(--1rpx) * 23 );
+	--24rpx : calc( var(--1rpx) * 24 );
+	--25rpx : calc( var(--1rpx) * 25 );
+	--26rpx : calc( var(--1rpx) * 26 );
+	--27rpx : calc( var(--1rpx) * 27 );
+	--28rpx : calc( var(--1rpx) * 28 );
+	--29rpx : calc( var(--1rpx) * 29 );
+	--30rpx : calc( var(--1rpx) * 30 );
+	--31rpx : calc( var(--1rpx) * 31 );
+	--32rpx : calc( var(--1rpx) * 32 );
+	--33rpx : calc( var(--1rpx) * 33 );
+	--34rpx : calc( var(--1rpx) * 34 );
+	--35rpx : calc( var(--1rpx) * 35 );
+	--36rpx : calc( var(--1rpx) * 36 );
+	--37rpx : calc( var(--1rpx) * 37 );
+	--38rpx : calc( var(--1rpx) * 38 );
+	--39rpx : calc( var(--1rpx) * 39 );
+	--40rpx : calc( var(--1rpx) * 40 );
+	--41rpx : calc( var(--1rpx) * 41 );
+	--42rpx : calc( var(--1rpx) * 42 );
+	--43rpx : calc( var(--1rpx) * 43 );
+	--44rpx : calc( var(--1rpx) * 44 );
+	--45rpx : calc( var(--1rpx) * 45 );
+	--46rpx : calc( var(--1rpx) * 46 );
+	--47rpx : calc( var(--1rpx) * 47 );
+	--48rpx : calc( var(--1rpx) * 48 );
+	--49rpx : calc( var(--1rpx) * 49 );
+	--50rpx : calc( var(--1rpx) * 50 );
+	--51rpx : calc( var(--1rpx) * 51 );
+	--52rpx : calc( var(--1rpx) * 52 );
+	--53rpx : calc( var(--1rpx) * 53 );
+	--54rpx : calc( var(--1rpx) * 54 );
+	--55rpx : calc( var(--1rpx) * 55 );
+	--56rpx : calc( var(--1rpx) * 56 );
+	--57rpx : calc( var(--1rpx) * 57 );
+	--58rpx : calc( var(--1rpx) * 58 );
+	--59rpx : calc( var(--1rpx) * 59 );
+	--60rpx : calc( var(--1rpx) * 60 );
+	--61rpx : calc( var(--1rpx) * 61 );
+	--62rpx : calc( var(--1rpx) * 62 );
+	--63rpx : calc( var(--1rpx) * 63 );
+	--64rpx : calc( var(--1rpx) * 64 );
+	--65rpx : calc( var(--1rpx) * 65 );
+	--66rpx : calc( var(--1rpx) * 66 );
+	--67rpx : calc( var(--1rpx) * 67 );
+	--68rpx : calc( var(--1rpx) * 68 );
+	--69rpx : calc( var(--1rpx) * 69 );
+	--70rpx : calc( var(--1rpx) * 70 );
+	--71rpx : calc( var(--1rpx) * 71 );
+	--72rpx : calc( var(--1rpx) * 72 );
+	--73rpx : calc( var(--1rpx) * 73 );
+	--74rpx : calc( var(--1rpx) * 74 );
+	--75rpx : calc( var(--1rpx) * 75 );
+	--76rpx : calc( var(--1rpx) * 76 );
+	--77rpx : calc( var(--1rpx) * 77 );
+	--78rpx : calc( var(--1rpx) * 78 );
+	--79rpx : calc( var(--1rpx) * 79 );
+	--80rpx : calc( var(--1rpx) * 80 );
+	--81rpx : calc( var(--1rpx) * 81 );
+	--82rpx : calc( var(--1rpx) * 82 );
+	--83rpx : calc( var(--1rpx) * 83 );
+	--84rpx : calc( var(--1rpx) * 84 );
+	--85rpx : calc( var(--1rpx) * 85 );
+	--86rpx : calc( var(--1rpx) * 86 );
+	--87rpx : calc( var(--1rpx) * 87 );
+	--88rpx : calc( var(--1rpx) * 88 );
+	--89rpx : calc( var(--1rpx) * 89 );
+	--90rpx : calc( var(--1rpx) * 90 );
+	--91rpx : calc( var(--1rpx) * 91 );
+	--92rpx : calc( var(--1rpx) * 92 );
+	--93rpx : calc( var(--1rpx) * 93 );
+	--94rpx : calc( var(--1rpx) * 94 );
+	--95rpx : calc( var(--1rpx) * 95 );
+	--96rpx : calc( var(--1rpx) * 96 );
+	--97rpx : calc( var(--1rpx) * 97 );
+	--98rpx : calc( var(--1rpx) * 98 );
+	--99rpx : calc( var(--1rpx) * 99 );
+	--100rpx : calc( var(--1rpx) * 100 );
+	--101rpx : calc( var(--1rpx) * 101 );
+	--102rpx : calc( var(--1rpx) * 102 );
+	--103rpx : calc( var(--1rpx) * 103 );
+	--104rpx : calc( var(--1rpx) * 104 );
+	--105rpx : calc( var(--1rpx) * 105 );
+	--106rpx : calc( var(--1rpx) * 106 );
+	--107rpx : calc( var(--1rpx) * 107 );
+	--108rpx : calc( var(--1rpx) * 108 );
+	--109rpx : calc( var(--1rpx) * 109 );
+	--110rpx : calc( var(--1rpx) * 110 );
+	--111rpx : calc( var(--1rpx) * 111 );
+	--112rpx : calc( var(--1rpx) * 112 );
+	--113rpx : calc( var(--1rpx) * 113 );
+	--114rpx : calc( var(--1rpx) * 114 );
+	--115rpx : calc( var(--1rpx) * 115 );
+	--116rpx : calc( var(--1rpx) * 116 );
+	--117rpx : calc( var(--1rpx) * 117 );
+	--118rpx : calc( var(--1rpx) * 118 );
+	--119rpx : calc( var(--1rpx) * 119 );
+	--120rpx : calc( var(--1rpx) * 120 );
+	--121rpx : calc( var(--1rpx) * 121 );
+	--122rpx : calc( var(--1rpx) * 122 );
+	--123rpx : calc( var(--1rpx) * 123 );
+	--124rpx : calc( var(--1rpx) * 124 );
+	--125rpx : calc( var(--1rpx) * 125 );
+	--126rpx : calc( var(--1rpx) * 126 );
+	--127rpx : calc( var(--1rpx) * 127 );
+	--128rpx : calc( var(--1rpx) * 128 );
+	--129rpx : calc( var(--1rpx) * 129 );
+	--130rpx : calc( var(--1rpx) * 130 );
+	--131rpx : calc( var(--1rpx) * 131 );
+	--132rpx : calc( var(--1rpx) * 132 );
+	--133rpx : calc( var(--1rpx) * 133 );
+	--134rpx : calc( var(--1rpx) * 134 );
+	--135rpx : calc( var(--1rpx) * 135 );
+	--136rpx : calc( var(--1rpx) * 136 );
+	--137rpx : calc( var(--1rpx) * 137 );
+	--138rpx : calc( var(--1rpx) * 138 );
+	--139rpx : calc( var(--1rpx) * 139 );
+	--140rpx : calc( var(--1rpx) * 140 );
+	--141rpx : calc( var(--1rpx) * 141 );
+	--142rpx : calc( var(--1rpx) * 142 );
+	--143rpx : calc( var(--1rpx) * 143 );
+	--144rpx : calc( var(--1rpx) * 144 );
+	--145rpx : calc( var(--1rpx) * 145 );
+	--146rpx : calc( var(--1rpx) * 146 );
+	--147rpx : calc( var(--1rpx) * 147 );
+	--148rpx : calc( var(--1rpx) * 148 );
+	--149rpx : calc( var(--1rpx) * 149 );
+	--150rpx : calc( var(--1rpx) * 150 );
+	--151rpx : calc( var(--1rpx) * 151 );
+	--152rpx : calc( var(--1rpx) * 152 );
+	--153rpx : calc( var(--1rpx) * 153 );
+	--154rpx : calc( var(--1rpx) * 154 );
+	--155rpx : calc( var(--1rpx) * 155 );
+	--156rpx : calc( var(--1rpx) * 156 );
+	--157rpx : calc( var(--1rpx) * 157 );
+	--158rpx : calc( var(--1rpx) * 158 );
+	--159rpx : calc( var(--1rpx) * 159 );
+	--160rpx : calc( var(--1rpx) * 160 );
+	--161rpx : calc( var(--1rpx) * 161 );
+	--162rpx : calc( var(--1rpx) * 162 );
+	--163rpx : calc( var(--1rpx) * 163 );
+	--164rpx : calc( var(--1rpx) * 164 );
+	--165rpx : calc( var(--1rpx) * 165 );
+	--166rpx : calc( var(--1rpx) * 166 );
+	--167rpx : calc( var(--1rpx) * 167 );
+	--168rpx : calc( var(--1rpx) * 168 );
+	--169rpx : calc( var(--1rpx) * 169 );
+	--170rpx : calc( var(--1rpx) * 170 );
+	--171rpx : calc( var(--1rpx) * 171 );
+	--172rpx : calc( var(--1rpx) * 172 );
+	--173rpx : calc( var(--1rpx) * 173 );
+	--174rpx : calc( var(--1rpx) * 174 );
+	--175rpx : calc( var(--1rpx) * 175 );
+	--176rpx : calc( var(--1rpx) * 176 );
+	--177rpx : calc( var(--1rpx) * 177 );
+	--178rpx : calc( var(--1rpx) * 178 );
+	--179rpx : calc( var(--1rpx) * 179 );
+	--180rpx : calc( var(--1rpx) * 180 );
+	--181rpx : calc( var(--1rpx) * 181 );
+	--182rpx : calc( var(--1rpx) * 182 );
+	--183rpx : calc( var(--1rpx) * 183 );
+	--184rpx : calc( var(--1rpx) * 184 );
+	--185rpx : calc( var(--1rpx) * 185 );
+	--186rpx : calc( var(--1rpx) * 186 );
+	--187rpx : calc( var(--1rpx) * 187 );
+	--188rpx : calc( var(--1rpx) * 188 );
+	--189rpx : calc( var(--1rpx) * 189 );
+	--190rpx : calc( var(--1rpx) * 190 );
+	--191rpx : calc( var(--1rpx) * 191 );
+	--192rpx : calc( var(--1rpx) * 192 );
+	--193rpx : calc( var(--1rpx) * 193 );
+	--194rpx : calc( var(--1rpx) * 194 );
+	--195rpx : calc( var(--1rpx) * 195 );
+	--196rpx : calc( var(--1rpx) * 196 );
+	--197rpx : calc( var(--1rpx) * 197 );
+	--198rpx : calc( var(--1rpx) * 198 );
+	--199rpx : calc( var(--1rpx) * 199 );
+	--200rpx : calc( var(--1rpx) * 200 );
+	
+}
+	
+	
+/* DARK MODE */
+:root.dark-mode { 
+	
+	/* TEXT COLORS */
+	--body-text-color: var(--dark-body-text-color);
+	--headings-text-color: var(--body-text-color);
+	--menu-color: var(--body-text-color);
+	--link-color: #f5ffa3;
+	--link-hover-color: var(--body-text-color);
+	
+	/* BG COLORS */
+	--body-bg-color: var(--dark-body-bg-color);
+	
+}

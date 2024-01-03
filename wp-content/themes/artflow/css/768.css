@@ -1,0 +1,190 @@
+/* TABLETS */
+@media screen and (min-width: 768px) { 
+	
+	
+	/* PORTFOLIO NAV */
+	.portfolio-nav div:not(:first-child) {
+		border-left: 1px solid rgb(0 0 0 / 10%); 
+		}
+    
+    /* SIDEBAR */
+	.site-middle > .layout-full {
+		display: grid; align-items: flex-start; gap: 7vw; grid-template-columns: /*primary*/minmax(400px, 100%) /*sidebar*/min(36%, 320px);
+		}
+	.site-middle .content-area:not(.with-sidebar) {
+		grid-column-start: 1; grid-column-end: -1; 
+		}
+	
+	/* ALIGNMENTS */
+	.alignnone {
+		margin: 3em 0; 
+		}
+	.aligncenter {
+		margin: 2.2em auto; 
+		}
+	.alignleft,
+	.alignright {
+		max-width: 50%; 
+		}
+	.alignright {
+		float:right; margin: 1.7em 0 1em 2em;
+		}
+	.alignleft {
+		float: left; margin: 1.7em 2em 1em 0;
+		}
+	
+	/* Forms */
+	input:not([type=submit]):not([type=button]):not([type=file]):not([type=radio]):not([type=checkbox]), 
+	select {
+		max-width: 360px; 
+		}
+
+ 	
+    
+    /* CONTACT FORM */
+	.contact-form p {
+		width: 50%; float: left;
+		}
+	.contact-form p:nth-of-type(1) {
+		padding-right: 32px;
+		}
+	.contact-form p:nth-of-type(n+3){
+		 width: 100%;
+		}	
+
+    
+	
+	/* BLOG */
+		
+	/* format chat */
+	.chat-row > div {
+		display: inline-block;
+		}
+	.chat-author {
+		text-align: right; width: 100px; margin-top: 5px; font-size: 14px; text-transform: uppercase;
+		}
+	
+	/* RELATED POSTS */
+	.post-grid {
+		grid-gap: var(--16rpx);
+		}
+	
+	/* COMMENTS */
+    .comment-meta img {
+        max-width: 66px; top: 14px; left: 0;
+        }
+    .comments-area ol ol {
+        margin-left: 8%
+        }
+	
+	/* Comment Form */
+    #respond form p { 
+        margin-bottom: 0; 
+        }
+    .comment-form-author,
+    .comment-form-email,
+    .comment-form-url{
+        float: left; width: 30%; margin-right: 3%;
+        }
+    .comment-form-url {
+        width: 34%; margin-right: 0;
+        }
+    .form-allowed-tags,
+    .form-submit { 
+        clear: left; 
+        }
+    .form-submit {
+        padding-top: 2em;
+        }
+		
+	/* FOOTER WIDGETS */
+    .site-footer .widget-area .widget { 
+        width: 33.3%; float: left; padding: 0 1.5em 1em 1em;
+        }	
+    .site-footer .widget-area .widget:first-child { 
+        padding-left: 0;
+        }
+    .site-footer .widget-area .widget:nth-child(3n) { 
+        padding-right: 0;
+        }
+		
+}
+
+
+
+/* DESKTOPS */	
+@media screen and (min-width: 992px) { 
+
+	/* HEADER */	
+	.header-wrap {
+		justify-content: space-between; text-align: center;
+		}
+	.is-header-align-center .header-wrap { 
+		justify-content: center;
+		}
+	.is-header-align-evenly .header-wrap { 
+		justify-content: space-evenly;
+		}
+	.is-header-align-around .header-wrap { 
+		justify-content: space-around;
+		}
+	.is-header-align-left .header-wrap { 
+		justify-content: flex-start;
+		}
+	.is-header-align-right .header-wrap { 
+		justify-content: flex-end;
+		}
+	/* NAV MENU */
+	.site-navigation { 
+		margin-left: var(--space-xxl);
+		}
+	.nav-menu a { 
+		margin: 0 var(--space-sm);
+		}
+	.nav-menu li.has-submenu > a::after {
+		content: '↵'; display: inline-block; transform: rotate(-90deg); margin-left: 5px;
+		}
+	.menu-wrap > ul > li {
+		display: inline-block;
+		}
+	/* Sub Menus */
+	.nav-menu ul ul {
+		display: block; visibility: hidden; font-size: 88%; opacity: 0; transform: translateX(20px) ; position: absolute; top: 100%; left: -12px; width: 9em; transition: all 0.2s; background: var(--body-bg-color); border-radius: 6px; padding: 16px 10px;
+		}
+	.nav-menu li:hover > ul {
+		opacity: 1; transform: translateX(0px); visibility: visible;
+		}
+	.nav-menu li:hover ul::before {
+		transform: translateX(0px); opacity: 1;
+		}
+	.nav-menu li ul a::before {
+		width: 0px; opacity: 0;  transform: translateX(50%);
+		}
+	.nav-menu li ul a:hover::before {
+		transform: translateX(0px); opacity: 1; width: 12px;
+		}
+	/* navigation level 3 */
+	.nav-menu ul ul ul { 
+		top: 0px; left: 100%; right: auto; 
+		}
+		
+}
+
+
+
+
+
+/* HIGH RES DESKTOPS */	
+@media screen and (min-width: 1300px) { 	
+		
+	
+	/* ALLIGNMENTS */
+	.post .alignright, 
+	.post .wp-caption.alignright {
+		max-width: 66%;	margin-right: -101px; margin-left: 2em;
+		}
+	.post .alignleft, 
+	.post .wp-caption.alignleft {
+		max-width: 66%;	margin-left: -101px; margin-right: 2em;
+		}	
+	}

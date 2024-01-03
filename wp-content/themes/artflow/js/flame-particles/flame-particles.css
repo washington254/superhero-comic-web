@@ -1,0 +1,7 @@
+#flame-particles {
+    position: fixed; top: 0; left: 0; display: block; pointer-events: none; z-index: 700;
+	} 
+body.blog #flame-particles,
+body.single-post #flame-particles {
+    display: none;
+	} 

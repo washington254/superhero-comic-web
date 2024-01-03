@@ -1,0 +1,38 @@
+
+
+
+.cursor {
+	--cursor-stroke: var(--link-hover-color);
+    --cursor-fill: none;
+    --cursor-stroke-width: 1px;
+	display: none;
+	}
+html.dark-mode .cursor {
+	--cursor-stroke: var(--body-text-color);
+	}
+.cursor.active {
+	--cursor-stroke-width: 2px;
+	/* --cursor-fill: var(--link-hover-color); */
+	}
+/* html.dark-mode .cursor.active {
+	--cursor-fill: var(--body-text-color);
+	} */
+
+
+/* this works on ios devices but not on android */
+@media (any-pointer: fine) {
+	.cursor {
+		position: fixed; top: 0; left: 0; display: block; pointer-events: none; opacity: 0; z-index: 9000;
+		}
+	html[data-horizontal-scroll="true"] .cursor {
+		position: absolute;
+	  }
+	.cursor__inner { 
+		fill: var(--cursor-fill); stroke: var(--cursor-stroke); stroke-width: var(--cursor-stroke-width);
+		}
+}
+
+/* hide cursor on android */
+html.touch .cursor {
+	display: none;
+	}

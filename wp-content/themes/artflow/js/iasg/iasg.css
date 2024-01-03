@@ -1,0 +1,153 @@
+html {
+ 	user-select: none; 
+    }
+body {
+ 	overscroll-behavior-y: none
+    }
+canvas {
+ 	width: 100%;  height: 100%;  left: 0;  opacity: 0;  position: fixed;  top: 0;  transition: opacity 1s ease; 
+    }
+.loaded canvas {
+ 	opacity: 1
+    }
+
+/* VERTICAL */
+.iasg.is-vertical {
+ 	height: 100%;  left: 0;  overflow: hidden;  position: fixed;  top: 0;  width: 100%;  z-index: 1; font-size: calc(100vw / 1920 * 10); 
+    }
+.iasg.is-vertical > div {
+ 	height: 295em;  position: relative;  visibility: hidden
+    }
+.iasg.is-vertical figure {
+ 	position: absolute;
+    }
+.iasg.is-vertical img {
+	display: block; height: 100%;  left: 0;  object-fit: cover;  position: absolute;  top: 0;  width: 100%
+    }
+.iasg.is-vertical figure:nth-child(1) {
+ 	height: 40em;  width: 70em
+    }
+.iasg.is-vertical figure:nth-child(2) {
+ 	height: 50em;  left: 85em;  top: 30em;  width: 40em
+    }
+.iasg.is-vertical figure:nth-child(3) {
+ 	height: 50em;  left: 15em;  top: 60em;  width: 60em
+    }
+.iasg.is-vertical figure:nth-child(4) {
+ 	height: 30em;  right: 0;  top: 10em;  width: 50em
+    }
+.iasg.is-vertical figure:nth-child(5) {
+ 	height: 60em;  right: 15em;  top: 55em;  width: 40em
+    }
+.iasg.is-vertical figure:nth-child(6) {
+ 	height: 75em;  left: 5em;  top: 120em;  width: 57.5em
+    }
+.iasg.is-vertical figure:nth-child(7) {
+ 	height: 70em;  right: 0;  top: 130em;  width: 50em
+    }
+.iasg.is-vertical figure:nth-child(8) {
+ 	height: 50em;  left: 85em;  top: 95em;  width: 40em
+    }
+.iasg.is-vertical figure:nth-child(9) {
+ 	height: 65em;  left: 75em;  top: 155em;  width: 50em
+    }
+.iasg.is-vertical figure:nth-child(10) {
+ 	height: 43em;  right: 0;  top: 215em;  width: 30em
+    }
+.iasg.is-vertical figure:nth-child(11) {
+ 	height: 50em;  left: 70em;  top: 235em;  width: 80em
+    }
+.iasg.is-vertical figure:nth-child(12) {
+ 	left: 0;  top: 210em;  height: 70em;  width: 50em
+    }
+@media (max-width: 1200px) {
+	.iasg.is-vertical > div {
+		height: 650em
+		}
+	.iasg.is-vertical figure:nth-child(1) {
+		height: 60em;  width: 100em
+		}
+	.iasg.is-vertical figure:nth-child(2) {
+		height: 110em;  left: auto;  right: 0;  top: 25em;  width: 70em
+		}
+	.iasg.is-vertical figure:nth-child(3) {
+		height: 80em;  left: 12em;  top: 80em;  width: 89em
+		}
+	.iasg.is-vertical figure:nth-child(4) {
+		height: 60em;  right: 0;  top: 153em;  width: 60em
+		}
+	.iasg.is-vertical figure:nth-child(5) {
+		height: 110em;  left: 0;  right: auto;  top: 180em;  width: 70em
+		}
+	.iasg.is-vertical figure:nth-child(6) {
+		height: 135em;  left: 95em;  top: 230em;  width: 87.5em
+		}
+	.iasg.is-vertical figure:nth-child(7) {
+		height: 110em;  left: 0;  right: auto;  top: 310em;  width: 80em
+		}
+	.iasg.is-vertical figure:nth-child(8) {
+		height: 50em;  left: auto;  right: 0;  top: 385em;  width: 80em
+		}
+	.iasg.is-vertical figure:nth-child(9) {
+		height: 100em;  left: 110em;  top: 450em;  width: 70em
+		}
+	.iasg.is-vertical figure:nth-child(10) {
+		height: 50em;  left: 20em;  right: auto;  top: 440em;  width: 55em
+		}
+	.iasg.is-vertical figure:nth-child(11) {
+		height: 70em;  left: auto;  right: 0;  top: 570em;  width: 70em
+		}
+	.iasg.is-vertical figure:nth-child(12) {
+		left: 0;  top: 515em;  height: 100em;  width: 90em
+		}
+    }
+
+/* HORIZONTAL */	
+.iasg.is-horizontal {
+ 	height: 100%;  left: 0;  position: fixed;  top: 0;  width: 100%;  z-index: 1; 
+    }
+.iasg.is-horizontal > div {
+ 	height: 100%;  position: relative;  width: 954em;  visibility: hidden;  font-size: calc(100vmin / 920 * 10); 
+    }
+.iasg.is-horizontal figure {
+ 	position: absolute
+    }
+.iasg.is-horizontal img {
+ 	display: block; height: 100%;  left: 0;  object-fit: cover;  position: absolute;  top: 0;  width: 100%
+    }
+.iasg.is-horizontal figure:nth-child(1) {
+ 	height: 66em;  left: 0;  top: -2em;  width: 54em
+    }
+.iasg.is-horizontal figure:nth-child(2) {
+ 	height: 70em;  left: 73em;  bottom: -2em;  width: 47em
+    }
+.iasg.is-horizontal figure:nth-child(3) {
+ 	height: 74em;  left: 140em;  top: -2em;  width: 60em
+    }
+.iasg.is-horizontal figure:nth-child(4) {
+ 	height: 55em;  left: 215em;  bottom: 8em;  width: 60em
+    }
+.iasg.is-horizontal figure:nth-child(5) {
+ 	top: -2em;  height: 70em;  left: 290em;  width: 54em
+    }
+.iasg.is-horizontal figure:nth-child(6) {
+ 	height: 75em;  left: 362em;  bottom: -2em;  width: 52em
+    }
+.iasg.is-horizontal figure:nth-child(7) {
+ 	height: 75em;  left: 436em;  top: 8em;  width: 70em
+    }
+.iasg.is-horizontal figure:nth-child(8) {
+ 	height: 74em;  left: 530em;  bottom: -2em;  width: 62em
+    }
+.iasg.is-horizontal figure:nth-child(9) {
+ 	height: 65em;  left: 610em;  top: 8em;  width: 70em
+    }
+.iasg.is-horizontal figure:nth-child(10) {
+ 	height: 70em;  left: 700em;  bottom: -2em;  width: 60em
+    }
+.iasg.is-horizontal figure:nth-child(11) {
+ 	height: 66em;  left: 780em;  top: -2em;  width: 80em
+    }
+.iasg.is-horizontal figure:nth-child(12) {
+ 	height: 76em;  left: 880em;  bottom: -2em;  width: 54em
+    }
